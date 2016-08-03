@@ -1,0 +1,13 @@
+<div class="inputForm">
+  <form id="form-container" class="form-container">
+    <label for="search">Search Flickr:</label>
+    <input type="text" name="search" ng-model="$ctrl.searchStr" />
+    <button ng-click="$ctrl.submit()" id="submitBtn">Search</button>
+  </form>
+</div>
+<ul class="images">
+  <li ng-repeat="img in $ctrl.images">
+    <p><a href="{{img.link}}">{{img.title}}</a></p>
+    <img ng-src="{{img.media.m}}" />
+  </li>
+</ul>

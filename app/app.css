@@ -1,0 +1,14 @@
+.inputForm {
+  border: solid black 1px;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.images {
+  list-style: none;
+}
+
+#submitBtn {
+  float: right;
+}
