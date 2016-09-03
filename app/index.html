@@ -2,20 +2,26 @@
 <html lang="en" ng-app="flickrSearchApp">
   <head>
     <meta charset="utf-8">
-    <title>ICF Report</title>
-    <link rel="stylesheet" type="text/css" href="../bower_components/angular-material/angular-material.css">
+    <title>Flickr Search App</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="app.css">
-    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="../bower_components/angular-aria/angular-aria.js"></script>
-    <script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
-    <script type="text/javascript" src="../bower_components/angular-material/angular-material.js"></script>
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
     <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+
     <script src="image-list/image-list.module.js"></script>
     <script src="image-list/image-list.component.js"></script>
+
+    <script src="image-detail/image-detail.module.js"></script>
+    <script src="image-detail/image-detail.component.js"></script>
   </head>
   <body>
 
-    <image-list></image-list>
+    <div ng-view></div>
 
   </body>
 </html>

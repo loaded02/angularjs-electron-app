@@ -1,13 +1,24 @@
-<div class="inputForm">
-  <form id="form-container" class="form-container">
-    <label for="search">Search Flickr:</label>
-    <input type="text" name="search" ng-model="$ctrl.searchStr" />
-    <button ng-click="$ctrl.submit()" id="submitBtn">Search</button>
-  </form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+          <form id="form-container">
+              <div class="form-group">
+                <label for="searchInput">Search Flickr:</label>
+                <input type="text" name="searchInput" class="form-control" ng-model="$ctrl.searchStr" />
+              </div>
+            <button ng-click="$ctrl.submit()" id="submitBtn" class="btn btn-default">Search</button>
+          </form>
+        </div>
+        <div class="col-md-10">
+            <h3>{{$ctrl.title}}</h3>
+            <p>{{$ctrl.modified | date }}</p>
+            <ul class="images">
+              <li ng-repeat="img in $ctrl.images" class="thumbnail">
+                <img ng-src="{{img.media.m}}" />
+                <a href="#!/images/image?media={{img.media.m}}&title={{img.title}}&date={{img.date_taken}}&desc={{img.description}}">{{img.title}}</a>
+                  <p>{{img.description}}</p>
+              </li>
+            </ul>
+        </div>
+    </div>
 </div>
-<ul class="images">
-  <li ng-repeat="img in $ctrl.images">
-    <p><a href="{{img.link}}">{{img.title}}</a></p>
-    <img ng-src="{{img.media.m}}" />
-  </li>
-</ul>

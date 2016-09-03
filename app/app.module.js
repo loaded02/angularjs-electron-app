@@ -2,5 +2,7 @@
 
 // Define the module
 angular.module('flickrSearchApp', [
-  'imageList'
+    'ngRoute',
+    'imageList',
+    'imageDetail'
 ]);
