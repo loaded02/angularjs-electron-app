@@ -12,6 +12,6 @@ angular.
             this.media = search.media;
             this.title = search.title;
             this.date = search.date;
-            this.desc = search.desc;
+            this.tags = search.tags;
         }]
 });

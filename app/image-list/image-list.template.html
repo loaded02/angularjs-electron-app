@@ -14,9 +14,9 @@
             <p>{{$ctrl.modified | date }}</p>
             <ul class="images">
               <li ng-repeat="img in $ctrl.images" class="thumbnail">
-                <img ng-src="{{img.media.m}}" />
-                <a href="#!/images/image?media={{img.media.m}}&title={{img.title}}&date={{img.date_taken}}&desc={{img.description}}">{{img.title}}</a>
-                  <p>{{img.description}}</p>
+                  <a href="#!/images/image?media={{img.media.m}}&title={{img.title}}&date={{img.date_taken}}&tags={{img.tags}}">
+                    <img ng-src="{{img.media.m}}" /></a>
+                  <p>{{img.title}}</p>
               </li>
             </ul>
         </div>

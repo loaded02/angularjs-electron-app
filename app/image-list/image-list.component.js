@@ -9,8 +9,7 @@ angular.
       var _http = $http;
       self.searchStr = 'kittens';
       self.submit = function submit() {
-        //self.$inject = ['$http'];
-        var flickrAPI = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=' + searchStr + '&tagmode=any&size=m&format=json&jsoncallback=JSON_CALLBACK';
+        var flickrAPI = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=' + self.searchStr + '&tagmode=any&size=m&format=json&jsoncallback=JSON_CALLBACK';
         _http.jsonp(flickrAPI).success(function(data) {
             self.title = data.title;
             self.modified = data.modified;
