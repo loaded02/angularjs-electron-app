@@ -9,7 +9,7 @@ angular.
         templateUrl: 'image-detail/image-detail.template.html',
         controller: ['$http', '$location', function ($http, $location) {
             var search = $location.search();
-            this.media = search.media;
+            this.media = search.media.replace("_m.jpg", "_z.jpg");
             this.title = search.title;
             this.date = search.date;
             this.tags = search.tags;
